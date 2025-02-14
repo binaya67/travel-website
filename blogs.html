@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Blogs - Binay Travel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="all">
+    <header>
+      <nav>
+        <div class="nav-logo"><a href="index.html">Binay-Travel</a></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="eco-travel.html">Eco Travel</a></li> <!-- New Eco Travel Page Link -->
+        </ul>
+        <div class="search-box">
+          <input type="search" name="search" id="search" placeholder="Search" oninput="handleSearch()" />
+          <i class="ri-search-line"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="blogs">
+        <h2>Our Blogs</h2>
+        <div class="blog-cards">
+          <div class="card">
+            <img src="images/Unique-Cultural-image.jpg" alt="Blog 1">
+            <h3>Top 10 Destinations in 2025</h3>
+            <p>Discover the most popular travel destinations for 2025. From Bali to Paris, explore the best places to visit.</p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="card">
+            <img src="images/mountains-lake-image.jpg" alt="Blog 2">
+            <h3>Travel Tips for Beginners</h3>
+            <p>New to traveling? Here are some essential tips to make your first trip unforgettable.</p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="card">
+            <img src="images/summer-fun-image.jpg" alt="Blog 3">
+            <h3>Exploring Hidden Gems</h3>
+            <p>Find out about the lesser-known destinations that offer unique experiences.</p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>About Us</h3>
+          <p>We are a travel agency dedicated to providing the best travel experiences. Our mission is to make your journey unforgettable.</p>
+        </div>
+        <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="pricing.html">Pricing</a></li> <!-- New Pricing Page Link -->
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h3>Contact Us</h3>
+          <p>Email: info@binaytravel.com</p>
+          <p>Phone: +977-9803983332</p>
+        </div>
+        <div class="footer-section newsletter">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form id="newsletterForm">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-twitter-fill"></i></a>
+        <a href="#"><i class="ri-instagram-fill"></i></a>
+        <a href="#"><i class="ri-linkedin-fill"></i></a>
+      </div>
+      <div class="bottom-tracker">
+        <span class="tracker-dot active"></span>
+        <span class="tracker-dot"></span>
+        <span class="tracker-dot"></span>
+        <span class="tracker-dot"></span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

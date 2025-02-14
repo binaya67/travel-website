@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binay Travel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="all">
+    <header>
+      <nav>
+        <div class="nav-logo"><a href="index.html">Binay-Travel</a></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="eco-travel.html">Eco Travel</a></li> <!-- New Eco Travel Page Link -->
+        </ul>
+        <div class="search-box">
+          <input type="search" name="search" id="search" placeholder="Search" oninput="handleSearch()" />
+          <i class="ri-search-line"></i>
+        </div>
+        <button id="darkModeToggle" class="dark-mode-btn"><i class="ri-moon-line"></i></button>
+      </nav>
+    </header>
+
+  
+
+    <main class="container">
+      <!-- Hero Section -->
+      <section class="container-left" data-aos="fade-right">
+        <div class="content">
+          <h1>
+            Discovering <br />
+            The World.
+          </h1>
+          <p>
+            Enjoy unforgettable experiences with us. From white sandy beaches to majestic mountains, we are ready to design your dream journey. Discover exciting adventures, stunning natural beauty, and memorable moments you will cherish for a lifetime.
+          </p>
+          <div class="btns">
+            <button class="read-more" onclick="window.location.href='about.html'">Read More</button>
+            <button class="our-blogs" onclick="window.location.href='blogs.html'">Our Blogs</button>
+          </div>
+          <div class="chevrons">
+            <span class="left-chevron" onclick="prevSlide()">
+              <i class="ri-arrow-left-s-line"></i>
+            </span>
+            <span class="right-chevron" onclick="nextSlide()">
+              <i class="ri-arrow-right-s-line"></i>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Travel Form -->
+      <section class="container-right" data-aos="fade-left">
+        <form id="travelForm">
+          <h4>Where do you want to go?</h4>
+          <div class="form-group">
+            <label for="destination">Destination: </label>
+            <input type="text" id="destination" placeholder="Enter your destination" required />
+          </div>
+          <div class="form-group">
+            <label for="date">Date: </label>
+            <input type="date" id="date" required />
+          </div>
+          <div class="form-group">
+            <label for="travelers">Number of Travelers: </label>
+            <input type="number" id="travelers" min="1" required />
+          </div>
+          <input class="submit-travel" type="submit" value="Check travel package" />
+        </form>
+      </section>
+    </main>
+
+    <!-- Popular Destinations Section -->
+    <section class="popular-destinations" data-aos="fade-up">
+      <h2>Popular Destinations</h2>
+      <div class="destination-cards">
+        <div class="card" data-aos="zoom-in">
+          <img src="images/bali-indonesia-image.jpg" alt="Destination 1">
+          <h3>Bali, Indonesia</h3>
+          <p>Explore the tropical paradise of Bali with its stunning beaches and vibrant culture.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="images/paris-france-image.jpg" alt="Destination 2">
+          <h3>Paris, France</h3>
+          <p>Experience the romance and charm of the City of Lights.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/tokyo-japan-image.jpg" alt="Destination 3">
+          <h3>Tokyo, Japan</h3>
+          <p>Discover the perfect blend of tradition and modernity in Tokyo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" data-aos="fade-up">
+      <h2>Our Gallery</h2>
+      <div class="gallery-images">
+        <img src="images/mountains-lake-image.jpg" alt="Gallery Image 1" data-aos="fade-right">
+        <img src="images/City-Skylines-image.jpg" alt="Gallery Image 2" data-aos="fade-up">
+        <img src="images/summer-fun-image.jpg" alt="Gallery Image 3" data-aos="fade-left">
+        <img src="images/Unique-Cultural-image.jpg" alt="Gallery Image 4" data-aos="fade-up">
+      </div>
+    </section>
+
+    <!-- Virtual Reality (VR) Tours Section -->
+    <section class="vr-tours" data-aos="fade-up">
+      <h2>Experience Destinations in VR</h2>
+      <p>Get a taste of your dream destinations with our immersive 360-degree VR tours.</p>
+      <div class="vr-container">
+        <iframe 
+          src="video/vr.mp4" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+          title="VR Tour"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" data-aos="fade-up">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-cards">
+        <div class="card" data-aos="zoom-in">
+          <p>"An unforgettable experience! The team at Baim Travel made our trip seamless and enjoyable."</p>
+          <h4>- John Doe</h4>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <p>"Highly recommend Baim Travel for their excellent service and attention to detail."</p>
+          <h4>- Jane Smith</h4>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <p>"The best travel agency I've ever worked with. They truly care about their customers."</p>
+          <h4>- Michael Brown</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" data-aos="fade-up">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-content">
+        <div class="faq-item" data-aos="fade-right">
+          <h3>How do I book a trip?</h3>
+          <p>You can book a trip by filling out the travel form on our website or contacting our customer service team.</p>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <h3>What payment methods do you accept?</h3>
+          <p>We accept all major credit cards, PayPal, and bank transfers.</p>
+        </div>
+        <div class="faq-item" data-aos="fade-left">
+          <h3>Can I cancel my booking?</h3>
+          <p>Yes, you can cancel your booking. Please refer to our cancellation policy for more details.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Quiz Section -->
+    <section class="travel-quiz" data-aos="fade-up">
+      <h2>Find Your Perfect Destination</h2>
+      <div id="quiz">
+        <p>Question 1: What’s your ideal vacation vibe?</p>
+        <button data-points="1">Relaxing on a beach</button>
+        <button data-points="2">Exploring a bustling city</button>
+        <button data-points="3">Hiking in the mountains</button>
+      </div>
+      <div id="quizResult"></div>
+    </section>
+
+    <!-- Eco-Friendly Travel Section -->
+    <section class="eco-travel" data-aos="fade-up">
+      <h2>Travel Sustainably</h2>
+      <p>Choose eco-friendly travel options and reduce your carbon footprint.</p>
+      <button onclick="calculateCarbonFootprint()">Calculate Your Carbon Footprint</button>
+      <div id="carbonResult"></div>
+      <a href="eco-travel.html" class="eco-packages-btn">Explore Eco-Friendly Travel Packages</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about" data-aos="fade-right">
+          <h3>About Us</h3>
+          <p>We are a travel agency dedicated to providing the best travel experiences. Our mission is to make your journey unforgettable.</p>
+        </div>
+        <div class="footer-section links" data-aos="fade-up">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="eco-travel.html">Eco Travel</a></li> <!-- New Eco Travel Page Link -->
+          </ul>
+        </div>
+        <div class="footer-section contact" data-aos="fade-up">
+          <h3>Contact Us</h3>
+          <p>Email: info@binaytravel.com</p>
+          <p>Phone: +977-9803983332</p>
+        </div>
+        <div class="footer-section newsletter" data-aos="fade-left">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form id="newsletterForm">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-twitter-fill"></i></a>
+        <a href="#"><i class="ri-instagram-fill"></i></a>
+        <a href="#"><i class="ri-linkedin-fill"></i></a>
+      </div>
+      <div class="bottom-tracker">
+        <span class="tracker-dot active"></span>
+        <span class="tracker-dot"></span>
+        <span class="tracker-dot"></span>
+        <span class="tracker-dot"></span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Whether animation should happen only once
+    });
+
+    // Carbon Footprint Calculator
+    function calculateCarbonFootprint() {
+      const carbonResult = document.getElementById("carbonResult");
+      carbonResult.innerHTML = `<p>Your carbon footprint is approximately 2.5 metric tons per year. Consider eco-friendly travel options to reduce it!</p>`;
+    }
+
+    
+  </script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/67aee63c3a842732607ea50a/1ik1j6nfo';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+  
+</body>
+</html>
